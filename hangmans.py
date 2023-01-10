@@ -1,3 +1,4 @@
+# It displays the hangmans in visuals, numbers are representing the lives left
 hangman_stages = {
         0: """
                 ___________
@@ -55,5 +56,4 @@ hangman_stages = {
                |
             """,
         7: "",
-    
-}
+    }
