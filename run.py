@@ -46,12 +46,15 @@ def main_hangman(words_list):
         print('Current word: ', ' '.join(secret_word))
         # Ask player the next move
         # Checks if the played letter is in the word
-        # 
+        # Add or remove the played letter and remove the lives left
         played_letter = input('Guess the letter: ').upper()
         if played_letter in alphabet - used_letters:
             used_letters.add(played_letter)
             if played_letter in letters_from_words:
                 letters_from_words.remove(played_letter)
+            else:
+                lives_left = lives_left - 1
+                print('This letter is not in the word.')
         elif played_letter in used_letters:
             print('You already guessed this letter. Please try again!')
         else:
