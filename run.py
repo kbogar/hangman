@@ -59,7 +59,7 @@ def main_hangman(words_list):
             print('You already guessed this letter. Please try again!')
         else:
             print('Wrong input. Please try again!')
-
+    # End game statements if player lose or win
     if lives_left == 0:
         print(hangman_stages[lives_left])
         print(f'I am sorry, You lose! The word was {word}')
