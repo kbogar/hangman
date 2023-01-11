@@ -5,7 +5,7 @@ import string
 from words import words_list
 from hangmans import hangman_stages
 
-#
+
 def get_word(words_list):
     """
     This function checks if the word is correct or not
@@ -60,6 +60,11 @@ def main_hangman(words_list):
         else:
             print('Wrong input. Please try again!')
 
+    if lives_left == 0:
+        print(hangman_stages[lives_left])
+        print(f'I am sorry, You lose! The word was {word}')
+    else:
+        print(f'Nice play, you got the correct word: {word}')
+
 
 main_hangman(words_list)
-
