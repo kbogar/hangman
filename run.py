@@ -26,12 +26,12 @@ def main_hangman(words_list):
     # Variable to generate letters from words
     letters_from_words = set(word)
     # Return all Ascii letters in uppercase and store in variable
-    abc = set(string.ascii_uppercase)
+    alphabet = set(string.ascii_uppercase)
     # Empty set of used letters to add them later
     used_letters = set()
 
     lives_left = 7
-    # Inputs from user
+    # Inputs from player
     while len(letters_from_words) > 0 and lives_left > 0:
         print(f'You have {lives_left} lives left.')
         print('Used letters: ', ' '.join(used_letters))
@@ -39,9 +39,23 @@ def main_hangman(words_list):
         # Writes out the played letters that in used letters
         # or we write out '-'
         # prints out the hangman stages with lives left
-        listwd = [letter if letter in used_letters else '-' for letter in word]
+        # a b c - - -
+        secret_word = [
+            letter if letter in used_letters else '-' for letter in word]
         print(hangman_stages[lives_left])
-        print('Current word: ', ' '.join(listwd))
+        print('Current word: ', ' '.join(secret_word))
+        # Ask player the next move
+        # Checks if the played letter is in the word
+        # 
+        played_letter = input('Guess the letter: ').upper()
+        if played_letter in alphabet - used_letters:
+            used_letters.add(played_letter)
+            if played_letter in letters_from_words:
+                letters_from_words.remove(played_letter)
+        elif played_letter in used_letters:
+            print('You already guessed this letter. Please try again!')
+        else:
+            print('Wrong input. Please try again!')
 
 
 main_hangman(words_list)
