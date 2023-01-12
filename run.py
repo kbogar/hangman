@@ -33,7 +33,7 @@ def main_hangman(words_list):
     lives_left = 7
     # Inputs from player
     while len(letters_from_words) > 0 and lives_left > 0:
-        print(f'You have {lives_left} lives left.')
+        print(f'You have {lives_left} lives left.\n')
         print('Used letters: ', ' '.join(used_letters))
 
         # Writes out the played letters that in used letters
@@ -52,13 +52,16 @@ def main_hangman(words_list):
             used_letters.add(played_letter)
             if played_letter in letters_from_words:
                 letters_from_words.remove(played_letter)
+                print('Correct!\n')
             else:
                 lives_left = lives_left - 1
                 print('This letter is not in the word.')
+                print('You lose a life.\n')
         elif played_letter in used_letters:
-            print('You already guessed this letter. Please try again!')
+            print('You already guessed this letter. Please try again!\n')
         else:
-            print('Wrong input. Please try again!')
+            print('You can only guess one letter in alphabet.')
+            print('Please try again!\n')
     # End game statements if player lose or win
     if lives_left == 0:
         print(hangman_stages[lives_left])
