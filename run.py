@@ -6,6 +6,20 @@ from words import words_list
 from hangmans import hangman_stages
 
 
+def welcome():
+    """
+    Start of the game with a welcome message
+    """
+    print(' _ ')                                            
+    print('| |')                                            
+    print('| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __')  
+    print('|  _ \ / _  |  _ \ / _` |  _ ` _ \ / _` |  _ \ ') 
+    print('| | | | (_| | | | | (_| | | | | | | (_| | | | |')
+    print('|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|')
+    print('                    __/ |        ')
+    print('                   |___/    \n')         
+
+
 def get_word(words_list):
     """
     This function checks if the word is correct or not
@@ -18,7 +32,7 @@ def get_word(words_list):
     return word.upper()
 
 
-def main_hangman(words_list):
+def start_hangman(words_list):
     """
     Main function for testing
     """
@@ -70,4 +84,9 @@ def main_hangman(words_list):
         print(f'Nice play, you got the correct word: {word}')
 
 
-main_hangman(words_list)
+def main():
+    welcome()
+    start_hangman(words_list)
+
+
+main()
