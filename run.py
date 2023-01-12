@@ -26,13 +26,14 @@ def welcome():
 
     player_name = ' '
     while True:
-        player_name = input('Please enter your name: \n')
+        player_name = input('Please enter your name: \n').upper()
 
         if player_name.isalpha() is not True:
             print('Your name must be alphabetic only.')
         else:
             print(f'Hello, {player_name}')
             break
+    return player_name
 
 
 def get_word(words_list):
@@ -47,7 +48,7 @@ def get_word(words_list):
     return word.upper()
 
 
-def start_hangman(words_list):
+def start_hangman():
     """
     Main function for testing
     """
@@ -93,14 +94,14 @@ def start_hangman(words_list):
     # End game statements if player lose or win
     if lives_left == 0:
         print(hangman_stages[lives_left])
-        print(f'I am sorry, You lose! The word was {word}')
+        print(f'I am sorry , You lose! The word was {word}')
     else:
         print(f'Nice play, you got the correct word: {word}')
 
 
 def main():
     welcome()
-    start_hangman(words_list)
+    start_hangman()
 
 
 main()
