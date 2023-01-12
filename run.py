@@ -17,7 +17,12 @@ def welcome():
     print('| | | | (_| | | | | (_| | | | | | | (_| | | | |')
     print('|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|')
     print('                    __/ |        ')
-    print('                   |___/    \n')         
+    print('                   |___/    \n')
+    print('************ Welcome to the Game! ************')
+    print('This is a simple word guessing game. You have to')
+    print('figure out an unknown word by guessing letters.')
+    print('If too many letters which do not appear in the')
+    print('word are guessed, then you are hanged and lose.')        
 
 
 def get_word(words_list):
@@ -49,7 +54,6 @@ def start_hangman(words_list):
     while len(letters_from_words) > 0 and lives_left > 0:
         print(f'You have {lives_left} lives left.\n')
         print('Used letters: ', ' '.join(used_letters))
-
         # Writes out the played letters that in used letters
         # or we write out '-'
         # prints out the hangman stages with lives left
