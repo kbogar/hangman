@@ -8,7 +8,8 @@ from hangmans import hangman_stages
 
 def welcome():
     """
-    Start of the game with a welcome message and game rules
+    Start of the game with a welcome message and game rules.
+    Asks for player name.
     """
     print(' _ ')                                            
     print('| |')                                            
@@ -23,7 +24,7 @@ def welcome():
     print('figure out an unknown word by guessing letters.')
     print('If too many letters which do not appear in the')
     print('word are guessed, then you are hanged and lose.\n')
-
+    
     while True:
         global player_name
         player_name = input('Please enter your name: \n').upper()
@@ -33,7 +34,6 @@ def welcome():
         else:
             print(f'Hello, {player_name}')
             break
-    return player_name
 
 
 def get_word(words_list):
@@ -48,9 +48,19 @@ def get_word(words_list):
     return word.upper()
 
 
+def play_again():
+    """
+    If the game is finished, the game asks the player if
+    they wish to play again or not.
+    """
+
+
 def start_hangman():
     """
-    Main function for testing
+    Main logic of the game play. It will get a word, 
+    generate letters, it will ask player inputs,
+    also check the lives left and generate 
+    corresponding print statements.
     """
     word = get_word(words_list)
     # Variable to generate letters from words
