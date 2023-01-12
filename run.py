@@ -24,8 +24,8 @@ def welcome():
     print('If too many letters which do not appear in the')
     print('word are guessed, then you are hanged and lose.\n')
 
-    player_name = ' '
     while True:
+        global player_name
         player_name = input('Please enter your name: \n').upper()
 
         if player_name.isalpha() is not True:
@@ -94,9 +94,9 @@ def start_hangman():
     # End game statements if player lose or win
     if lives_left == 0:
         print(hangman_stages[lives_left])
-        print(f'I am sorry , You lose! The word was {word}')
+        print(f'I am sorry {player_name}, You lose! The word was {word}')
     else:
-        print(f'Nice play, you got the correct word: {word}')
+        print(f'Nice play {player_name}, you got the correct word: {word}')
 
 
 def main():
