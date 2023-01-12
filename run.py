@@ -8,7 +8,7 @@ from hangmans import hangman_stages
 
 def welcome():
     """
-    Start of the game with a welcome message
+    Start of the game with a welcome message and game rules
     """
     print(' _ ')                                            
     print('| |')                                            
@@ -22,7 +22,17 @@ def welcome():
     print('This is a simple word guessing game. You have to')
     print('figure out an unknown word by guessing letters.')
     print('If too many letters which do not appear in the')
-    print('word are guessed, then you are hanged and lose.')        
+    print('word are guessed, then you are hanged and lose.\n')
+
+    player_name = ' '
+    while True:
+        player_name = input('Please enter your name: \n')
+
+        if player_name.isalpha() is not True:
+            print('Your name must be alphabetic only.')
+        else:
+            print(f'Hello, {player_name}')
+            break
 
 
 def get_word(words_list):
