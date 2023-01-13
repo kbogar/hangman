@@ -16,10 +16,10 @@ def welcome():
     a welcome message and game rules. Requests player name and prints
     out the corresponding message.
     """
-    print(' _ ')                                            
-    print('| |')                                            
-    print('| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __')  
-    print('|  _ \ / _  |  _ \ / _` |  _ ` _ \ / _` |  _ \ ') 
+    print(' _ ')
+    print('| |')
+    print('| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __')
+    print('|  _ \ / _  |  _ \ / _` |  _ ` _ \ / _` |  _ \ ')
     print('| | | | (_| | | | | (_| | | | | | | (_| | | | |')
     print('|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|')
     print('                    __/ |        ')
@@ -29,7 +29,6 @@ def welcome():
     print('figure out an unknown word by guessing letters.')
     print('If too many letters which do not appear in the')
     print('word are guessed, then you are hanged and lose.\n')
-    
     while True:
         global player_name
         player_name = input('Please enter your name: \n').upper()
@@ -73,9 +72,9 @@ def play_again():
 
 def start_hangman():
     """
-    Main logic of the game play. It will get a word, 
+    Main logic of the game play. It will get a word,
     generate letters, it will ask player inputs,
-    also check the lives left and generate 
+    also check the lives left and generate
     corresponding print messages.
     """
     word = get_word(words_list)
