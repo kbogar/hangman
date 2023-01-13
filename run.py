@@ -61,11 +61,11 @@ def play_again():
     """
     replay = input('Would you like to play again? Enter Y or N \n')
     if replay == 'y':
-        print('Nice! Have a try again!\n')
-        main()
+        print(f'Nice! Have a try again {player_name}!\n')
+        start_hangman()
     elif replay == 'n':
         print('Thank you for playing! Hope to see you soon!')
-        print('**** Game Over ****')
+        print('**************** Game Over *****************')
     else:
         print('Please type either Y or N.')
         play_again()
@@ -96,7 +96,7 @@ def start_hangman():
         secret_word = [
             letter if letter in used_letters else '-' for letter in word]
         print(hangman_stages[lives_left])
-        print('Current word: ', ' '.join(secret_word))
+        print('Secret word: ', ' '.join(secret_word))
         # Ask player the next move
         # Checks if the played letter is in the word
         # Add or remove the played letter and remove the lives left
