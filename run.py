@@ -99,7 +99,7 @@ def start_hangman():
         # Ask player the next move
         # Checks if the played letter is in the word
         # Add or remove the played letter and remove the lives left
-        played_letter = input('Guess the letter: ').upper()
+        played_letter = input('Guess the letter: \n').upper()
         if played_letter in alphabet - used_letters:
             used_letters.add(played_letter)
             if played_letter in letters_from_words:
