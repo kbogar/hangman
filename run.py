@@ -44,7 +44,7 @@ def welcome():
 def get_word(words_list):
     """
     This function checks if the word is correct or not
-    and gets a random word with uppercase
+    and gets a random word from words file.
     """
     word = random.choice(words_list)
     while ('-' in word) or (' ' in word):
@@ -57,13 +57,18 @@ def play_again():
     """
     If the game is finished, the game asks the player if
     they wish to play again or not. If yes the game restarts,
-    if not the game exit.
+    if not the game exits.
     """
     replay = input('Would you like to play again? Enter Y or N \n')
     if replay == 'y':
+        print('Nice! Have a try again!\n')
         main()
-    else:
+    elif replay == 'n':
         print('Thank you for playing! Hope to see you soon!')
+        print('**** Game Over ****')
+    else:
+        print('Please type either Y or N.')
+        play_again()
 
 
 def start_hangman():
@@ -71,7 +76,7 @@ def start_hangman():
     Main logic of the game play. It will get a word, 
     generate letters, it will ask player inputs,
     also check the lives left and generate 
-    corresponding print statements.
+    corresponding print messages.
     """
     word = get_word(words_list)
     # Variable to generate letters from words
@@ -80,9 +85,7 @@ def start_hangman():
     alphabet = set(string.ascii_uppercase)
     # Empty set of used letters to add them later
     used_letters = set()
-
     lives_left = 7
-    # Inputs from player
     while len(letters_from_words) > 0 and lives_left > 0:
         print(f'You have {lives_left} lives left.\n')
         print('Used letters: ', ' '.join(used_letters))
@@ -112,7 +115,9 @@ def start_hangman():
         else:
             print('You can only guess one letter in alphabet.\n')
             print('Please try again!\n')
-    # End game statements if player lose or win
+    # End game messages if player lose or win
+    # and ask player if he wants to continue playing
+    # or end the game
     if lives_left == 0:
         print(hangman_stages[lives_left])
         print(f'I am sorry {player_name}, You lose! The word was {word}')
