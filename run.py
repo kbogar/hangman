@@ -1,15 +1,20 @@
-# Importing libraries
+"""
+Import libraries random for selecting random
+words for the game, and string module for
+ASCII letters. Also imports from words.py and
+hangmans.py.
+"""
 import random
 import string
-# Imports from other files
 from words import words_list
 from hangmans import hangman_stages
 
 
 def welcome():
     """
-    Start of the game with a welcome message and game rules.
-    Asks for player name.
+    Start of the game with logo from (https://ascii.co.uk/art/hangman)
+    a welcome message and game rules. Requests player name and prints
+    out the corresponding message.
     """
     print(' _ ')                                            
     print('| |')                                            
@@ -19,7 +24,7 @@ def welcome():
     print('|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|')
     print('                    __/ |        ')
     print('                   |___/    \n')
-    print('************ Welcome to the Game! ************')
+    print('************ Welcome to the Game! ************\n')
     print('This is a simple word guessing game. You have to')
     print('figure out an unknown word by guessing letters.')
     print('If too many letters which do not appear in the')
@@ -32,7 +37,7 @@ def welcome():
         if player_name.isalpha() is not True:
             print('Your name must be alphabetic only.')
         else:
-            print(f'Hello, {player_name}')
+            print(f'Hello, {player_name}\n')
             break
 
 
@@ -100,12 +105,12 @@ def start_hangman():
                 print('Correct!\n')
             else:
                 lives_left = lives_left - 1
-                print('This letter is not in the word.')
+                print('This letter is not in the word.\n')
                 print('You lose a life.\n')
         elif played_letter in used_letters:
             print('You already guessed this letter. Please try again!\n')
         else:
-            print('You can only guess one letter in alphabet.')
+            print('You can only guess one letter in alphabet.\n')
             print('Please try again!\n')
     # End game statements if player lose or win
     if lives_left == 0:
@@ -118,6 +123,9 @@ def start_hangman():
 
 
 def main():
+    """
+    Main functions of the game
+    """
     welcome()
     start_hangman()
 
