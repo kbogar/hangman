@@ -51,8 +51,14 @@ def get_word(words_list):
 def play_again():
     """
     If the game is finished, the game asks the player if
-    they wish to play again or not.
+    they wish to play again or not. If yes the game restarts,
+    if not the game exit.
     """
+    replay = input('Would you like to play again? Enter Y or N \n')
+    if replay == 'y':
+        main()
+    else:
+        print('Thank you for playing! Hope to see you soon!')
 
 
 def start_hangman():
@@ -105,8 +111,10 @@ def start_hangman():
     if lives_left == 0:
         print(hangman_stages[lives_left])
         print(f'I am sorry {player_name}, You lose! The word was {word}')
+        play_again()
     else:
         print(f'Nice play {player_name}, you got the correct word: {word}')
+        play_again()
 
 
 def main():
