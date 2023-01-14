@@ -39,3 +39,23 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 * Add a letter to used letters and also to secret word. 
 
 ![](/assets/images/hangman6.png)
+
+* Game Lost - if the user used all his lifes, it prints out the last hangman visual, lose message with the users name and unveil the secret word.
+* Then the terminal prints out a question - Would you like to play again Y or N 
+* The game waits for user input.
+
+![](/assets/images/hangman7.png)
+
+* If the user choose Y then the game restarts with a message - Nice! Have a try again User Name.
+
+![](/assets/images/hangman8.png)
+
+* If the user choose N then the game exits with a message - Thank you for playing! Hope to see you soon.
+
+![](/assets/images/hangman9.png)
+
+* Game Win - If the user guess the secret word and wins, the terminal prints out a congratulation message, unveiling the secret word.
+* Then the terminal prints out a question - Would you like to play again Y or N
+* The game waits for user input.
+
+![](/assets/images/hangman10.png)
