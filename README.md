@@ -9,6 +9,9 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 
 ![](/assets/images/screenshot.png)
 
+# FLOWCHART
+
+
 # FEATURES
 ## Existing features
 * Welcome to the game with a game logo and a brief description of the rules.
@@ -59,3 +62,47 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 * The game waits for user input.
 
 ![](/assets/images/hangman10.png)
+
+## Future features
+
+# TECHNOLOGIES USED
+
+# TESTING
+
+## Validator testing
+
+## Bugs
+
+## Remaining Bugs
+
+# DEPLOYMENT
+
+## Github Deployment
+Deployment was made possible by GitHub.
+* On gitHub repository, click on settings tab
+* On settings page, click on pages tab
+* Under the Source section, click on the drop down menu, select main
+* The page is now published with a link available to use.
+## How to clone
+* Log in to GitHub and go to the repository
+* Go to the code dropdown and select how you would like to clone and copy the link provided
+* Go to the new repo and enter in your workspace terminal "git clone" followed by the link copied.
+
+## How to fork
+* Log in to GitHub
+* Go to the repository and click on the fork button towards the top right of the page.
+
+## Heroku Deployment
+* Go to https://dashboard.heroku.com/page, click New/Create New App from drop down menu
+* On the next page write your app Name and Choose a region, Create App.
+* In the settings tab click on Reveal Config Vars and add key Port and value 8000.
+* Next click Add buildpack and choose Python and NodeJs in this order.
+* Click on Deploy tab and select connect to GitHub
+* Enter the repository Name and click Search
+* Choose your repository and click Connect.
+* Choose between Manual or Automatic deployment
+* After the deployment methon has been chosen the app will be built and can be launched by clicking the Open App button.
+
+# CREDITS
+
+
