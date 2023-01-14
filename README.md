@@ -17,6 +17,25 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 ![](/assets/images/hangman1.png)
 
 * Once the user enters his user name it starts the game with hello "Users Name".
-* It shows the lives left, used letters, secret word to guess and guess the letter input.
+* It shows the lives left, used letters, secret word to guess and guess the letter input from user.
 
 ![](/assets/images/hangman2.png)
+
+* After the input from user, the terminal prints out which letter he guessed, if the letter is in the secret word or not
+* You lose a life, lifes left, used letters, the first hangman visual because the letter was not correct
+* Secret word currently empty and next imput from user to guess a letter.
+
+![](/assets/images/hangman3.png)
+
+* You already guessed this letter. Please try again! - message if the user already used the same letter.
+
+![](/assets/images/hangman4.png)
+
+* You can only guess one letter in alphabet. - message if the user inputs numbers or more then one letter.
+
+![](/assets/images/hangman5.png)
+
+* If the user guessed a correct letter, it prints out - Correct! to the terminal
+* Add a letter to used letters and also to secret word. 
+
+![](/assets/images/hangman6.png)
