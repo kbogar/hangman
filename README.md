@@ -1,5 +1,5 @@
 # HANGMAN
-Hangman is a simple word guessing game, which runs in the mock terminal on Heroku. The player have to guess the secret word by inputing letters. If the letter is incorrect the hangman visuals will appear to the player with a remaining lives left. If the secret word is not solved after 7 guesses the player is lost the game. This retro terminal game will provide fun gaming time for the user. 
+Hangman is a simple word guessing game, which runs in the mock terminal on Heroku. The player have to guess the secret word by inputing letters. If the letter is incorrect the hangman visuals will appear to the player with a remaining lives left. If the secret word is not solved after 7 guesses the player will lost the game. This retro terminal game will provide fun gaming time for the user. 
 
 You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Hangman_(game)).
 
@@ -8,8 +8,6 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 * Deployed game site can be found here: https://hangman024.herokuapp.com/
 
 ![](/assets/images/screenshot.png)
-
-# FLOWCHART
 
 
 # FEATURES
@@ -30,11 +28,11 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 
 ![](/assets/images/hangman3.png)
 
-* You already guessed this letter. Please try again! - message if the user already used the same letter.
+* You already guessed this letter. Please try again! - message will appear if the user already used the same letter.
 
 ![](/assets/images/hangman4.png)
 
-* You can only guess one letter in alphabet. - message if the user inputs numbers or more then one letter.
+* You can only guess one letter in alphabet. - message will appear if the user input numbers or more then one letter.
 
 ![](/assets/images/hangman5.png)
 
@@ -49,7 +47,7 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 
 ![](/assets/images/hangman7.png)
 
-* If the user choose Y then the game restarts with a message - Nice! Have a try again User Name.
+* If the user choose Y then the game restarts with a message - Nice! Have a try again "User Name".
 
 ![](/assets/images/hangman8.png)
 
