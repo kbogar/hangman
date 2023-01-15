@@ -76,7 +76,7 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 # TESTING
 * I have tested my project on PEP8 Linter and confirmed that there are no issues
 * I tested in my local terminal and the Code Institute Heroku terminal.
-* Also given invalid inputs when letters are expected, same inputs twice.
+* Also given invalid inputs when letters are expected, same inputs twice and there were no issues.
 ## PEP8 test run.py
 ![](/assets/images/runpy.png)
 
@@ -85,11 +85,14 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 
 ## PEP8 test hangmans.py
 ![](/assets/images/hangmanspy.png)
-## Validator testing
 
 ## Bugs
+I have encountered few errors during coding of my project and there were fixed throughout the development.
+* Trailing whitespace errors and line too long errors
+* Invalid escape sequence and anomalous backslash in string - There was quite alot of these erros in my hangmans visuals and ascii logo, and I solved them by adding 'r' prefix before a string.
 
 ## Remaining Bugs
+* There are no unfixed bugs remaining
 
 # DEPLOYMENT
 
@@ -120,5 +123,13 @@ Deployment was made possible by GitHub.
 * After the deployment methon has been chosen the app will be built and can be launched by clicking the Open App button.
 
 # CREDITS
+* [Code Institute](https://codeinstitute.net/) for the Python Template and Readme.md Template
+* [Stack Overflow](https://stackoverflow.com/) when I was stucked and needed information to assist with bugs.
+* [W3School](https://www.w3schools.com/) for general helpful tips for Python.
+* Online tutorial from [Shaun Halverson](https://www.youtube.com/watch?v=pFvSb7cb_Us) and [Kylie Ying](https://www.youtube.com/watch?v=cJJTnI22IF8)
+* My logo is from https://ascii.co.uk/
+* The random words are from https://www.randomlists.com/
+* Thank you anyone who had time to view my project and give feedback.
+* Also my wife thank you for all the support.
 
 
