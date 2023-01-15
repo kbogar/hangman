@@ -64,11 +64,27 @@ You can read more about the game on [Wikipedia](https://en.wikipedia.org/wiki/Ha
 ![](/assets/images/hangman10.png)
 
 ## Future features
+* Allow player to choose difficulty levels
+* Have a high score system
+* Allow multiplayers
 
 # TECHNOLOGIES USED
+* Code Institute Template to work on Python terminal and Git use to code
+* GitHub for repository
+* Heroku App for project deployment
 
 # TESTING
+* I have tested my project on PEP8 Linter and confirmed that there are no issues
+* I tested in my local terminal and the Code Institute Heroku terminal.
+* Also given invalid inputs when letters are expected, same inputs twice.
+## PEP8 test run.py
+![](/assets/images/runpy.png)
 
+## PEP8 test words.py
+![](/assets/images/runpy.png)
+
+## PEP8 test hangmans.py
+![](/assets/images/hangmanspy.png)
 ## Validator testing
 
 ## Bugs
